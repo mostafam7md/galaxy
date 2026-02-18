@@ -56,7 +56,7 @@ const GalleryList: React.FC = () => {
                   className={`filter-btn ${
                     selectedCategory === cat ? "active" : ""
                   }`}
-                  onClick={() => setSelectedCategory(cat)}
+                  onClick={() => setSelectedCategory(cat || "all")}
                 >
                   {cat === "all" ? "All" : cat}
                 </button>

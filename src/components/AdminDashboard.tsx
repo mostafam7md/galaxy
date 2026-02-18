@@ -18,7 +18,7 @@ const AdminDashboard: React.FC = () => {
 
   // Mock admin stats
   const adminStats: AdminStats = {
-    totalMembers: communityStats?.totalMembers || 2500,
+    totalMembers: communityStats?.members || 2500,
     activeEvents: 12,
     newSignups: 48,
     revenue: 12450,
@@ -302,7 +302,7 @@ const AdminDashboard: React.FC = () => {
                     <div key={offer.id} className="table-row">
                       <span className="offer-title">{offer.title}</span>
                       <span className="offer-discount">
-                        {offer.discountPercentage}%
+                        {offer.discount || 0}%
                       </span>
                       <span className="offer-date">
                         {new Date(offer.validUntil).toLocaleDateString(

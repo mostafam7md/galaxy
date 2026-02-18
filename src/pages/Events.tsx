@@ -5,7 +5,6 @@ import "./Events.css";
 
 const Events: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
 
   if (id) {
     return <EventDetail id={id} />;
@@ -224,16 +223,6 @@ const EventsList: React.FC = () => {
 const EventDetail: React.FC<{ id: string }> = ({ id }) => {
   const { data: event, loading } = useEvent(id);
   const navigate = useNavigate();
-  const [registering, setRegistering] = useState(false);
-  const [registered, setRegistered] = useState(false);
-
-  const handleRegister = async () => {
-    setRegistering(true);
-    // Simulate registration API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setRegistered(true);
-    setRegistering(false);
-  };
 
   if (loading) {
     return (

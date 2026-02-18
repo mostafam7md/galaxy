@@ -197,7 +197,11 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="story-image fade-in-up delay-1">
-              <img src="/story.jpg" alt="Galaxy Gaming Club Story" className="story-img" />
+              <img
+                src="/story.jpg"
+                alt="Galaxy Gaming Club Story"
+                className="story-img"
+              />
             </div>
           </div>
         </div>
